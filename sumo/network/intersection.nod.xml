@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Nodes define the junctions and boundary points of our road network.
+  - 'center': The 4-way intersection where traffic flows meet and are controlled by traffic lights.
+  - 'west', 'east', 'north', 'south': The entry and exit boundary nodes for traffic.
+-->
+<nodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
+    <node id="center" x="0.0"    y="0.0"    type="traffic_light"/>
+    <node id="west"   x="-150.0" y="0.0"    type="priority"/>
+    <node id="east"   x="150.0"  y="0.0"    type="priority"/>
+    <node id="north"  x="0.0"    y="150.0"  type="priority"/>
+    <node id="south"  x="0.0"    y="-150.0" type="priority"/>
+</nodes>

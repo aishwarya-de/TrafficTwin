@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Master SUMO configuration file.
+  Links the network and route files, and specifies simulation parameters.
+-->
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <input>
+        <net-file value="../network/intersection.net.xml"/>
+        <route-files value="../routes/intersection.rou.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="1000"/>
+        <step-length value="1.0"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <gui_only>
+        <start value="true"/>
+        <quit-on-end value="false"/>
+    </gui_only>
+</configuration>

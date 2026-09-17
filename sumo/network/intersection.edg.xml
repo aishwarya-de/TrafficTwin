@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Edges define the directed road segments connecting nodes.
+  - Each road segment has 2 lanes (numLanes="2").
+  - Speed limit is 13.89 m/s (~50 km/h or ~31 mph), typical for urban roads.
+-->
+<edges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+    <!-- Inbound edges toward the central intersection -->
+    <edge id="west_to_center"  from="west"   to="center" priority="75" numLanes="2" speed="13.89"/>
+    <edge id="east_to_center"  from="east"   to="center" priority="75" numLanes="2" speed="13.89"/>
+    <edge id="north_to_center" from="north"  to="center" priority="75" numLanes="2" speed="13.89"/>
+    <edge id="south_to_center" from="south"  to="center" priority="75" numLanes="2" speed="13.89"/>
+
+    <!-- Outbound edges leaving the central intersection -->
+    <edge id="center_to_east"  from="center" to="east"  priority="75" numLanes="2" speed="13.89"/>
+    <edge id="center_to_west"  from="center" to="west"  priority="75" numLanes="2" speed="13.89"/>
+    <edge id="center_to_south" from="center" to="south" priority="75" numLanes="2" speed="13.89"/>
+    <edge id="center_to_north" from="center" to="north" priority="75" numLanes="2" speed="13.89"/>
+</edges>

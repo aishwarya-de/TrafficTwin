@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Routes define vehicle types, movement trajectories, and vehicle departures.
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Vehicle Types -->
+    <!-- Standard passenger car (yellow) -->
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5.0" minGap="2.5" maxSpeed="13.89" color="1,1,0"/>
+    <!-- Faster sports car (cyan) -->
+    <vType id="fast_car" accel="3.0" decel="5.0" sigma="0.5" length="4.8" minGap="2.0" maxSpeed="16.67" color="0,1,1"/>
+    <!-- Public transit bus (blue) -->
+    <vType id="bus" accel="1.2" decel="3.5" sigma="0.5" length="12.0" minGap="3.0" maxSpeed="11.11" color="0.2,0.6,1.0"/>
+
+    <!-- Routes: Complete paths traversing inbound and outbound edges -->
+    <!-- Straight routes -->
+    <route id="route_WE" edges="west_to_center center_to_east"/>
+    <route id="route_EW" edges="east_to_center center_to_west"/>
+    <route id="route_NS" edges="north_to_center center_to_south"/>
+    <route id="route_SN" edges="south_to_center center_to_north"/>
+
+    <!-- Turning routes -->
+    <route id="route_WN" edges="west_to_center center_to_north"/>
+    <route id="route_WS" edges="west_to_center center_to_south"/>
+    <route id="route_ES" edges="east_to_center center_to_south"/>
+    <route id="route_EN" edges="east_to_center center_to_north"/>
+    <route id="route_NE" edges="north_to_center center_to_east"/>
+    <route id="route_NW" edges="north_to_center center_to_west"/>
+    <route id="route_SE" edges="south_to_center center_to_east"/>
+    <route id="route_SW" edges="south_to_center center_to_west"/>
+
+    <!-- Vehicles departing at staggered times -->
+    <vehicle id="veh_0" type="car" route="route_WE" depart="0"/>
+    <vehicle id="veh_1" type="fast_car" route="route_SN" depart="2"/>
+    <vehicle id="veh_2" type="bus" route="route_EW" depart="5"/>
+    <vehicle id="veh_3" type="car" route="route_NS" depart="7"/>
+    <vehicle id="veh_4" type="fast_car" route="route_WN" depart="10"/>
+    <vehicle id="veh_5" type="car" route="route_SE" depart="12"/>
+    <vehicle id="veh_6" type="bus" route="route_WE" depart="15"/>
+    <vehicle id="veh_7" type="car" route="route_EW" depart="18"/>
+    <vehicle id="veh_8" type="fast_car" route="route_SN" depart="20"/>
+    <vehicle id="veh_9" type="car" route="route_NE" depart="24"/>
+    <vehicle id="veh_10" type="bus" route="route_NS" depart="28"/>
+    <vehicle id="veh_11" type="fast_car" route="route_WS" depart="32"/>
+    <vehicle id="veh_12" type="car" route="route_SW" depart="35"/>
+    <vehicle id="veh_13" type="car" route="route_ES" depart="38"/>
+    <vehicle id="veh_14" type="fast_car" route="route_EN" depart="42"/>
+</routes>
